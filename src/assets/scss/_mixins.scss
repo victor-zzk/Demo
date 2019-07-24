@@ -1,0 +1,43 @@
+/* 
+     ********mixin混合宏设置文件*******
+*/
+
+@import "variables";
+
+
+
+//单行文字溢出
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//多行文字溢出
+@mixin multiline-ellipsis($num: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+  white-space: normal !important;
+  word-wrap: break-word;
+  height: 32px;
+     
+}
+
+
+//flex布局居中
+@mixin flex-center($direction:row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+//flex布局两边排开
+@mixin flex-between(){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

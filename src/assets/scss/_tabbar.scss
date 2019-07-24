@@ -1,0 +1,21 @@
+/* tabbar组件样式 */
+@import "~assets/scss/mixins";//引入mixins文件
+
+.g-tabbar {
+    width: 100%;
+    @include flex-center($direction:row);
+    &-item {
+        flex-grow: 1;
+        @include flex-center($direction: column);
+        height: $tabbar-height;
+        
+    }
+}
+
+.iconfont{
+   font-size: $icon-font-size;
+margin-bottom: 5px;
+}
+.icon-shouye{
+    font-size:25px;
+}
